@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+  #mld strong { font-weight: bold }
+  #mld i { font-style: italic }
+  #mld ul { list-style-type:square; margin: 0 0 1em 2em }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>TEACHER</span> (
+    <span class='primary'>teacher_id</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>firstname</span>,
+    <span class='normal'>lastname</span>,
+    <span class='normal'>role</span>,
+    <span class='normal'>avatar</span>,
+    <span class='normal'>description</span>
+  )
+  <ul>
+    <li>Le champ <i>teacher_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>TEACHER</i>.</li>
+    <li>Les champs <i>email</i>, <i>password</i>, <i>firstname</i>, <i>lastname</i>, <i>role</i>, <i>avatar</i> et <i>description</i> étaient déjà de simples attributs de l'entité <i>TEACHER</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>LESSON</span> (
+    <span class='primary'>lesson_id</span>,
+    <span class='normal'>appointment</span>,
+    <span class='normal'>status</span>,
+    <span class='normal'>email_student:</span>,
+    <span class='foreign'>instrument_id</span>,
+    <span class='foreign'>teacher_id</span>,
+    <span class='foreign'>student_id</span>
+  )
+  <ul>
+    <li>Le champ <i>lesson_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>LESSON</i>.</li>
+    <li>Les champs <i>appointment</i>, <i>status</i> et <i>email_student:</i> étaient déjà de simples attributs de l'entité <i>LESSON</i>.</li>
+    <li>Le champ <i>instrument_id</i> est une clef étrangère. Il a migré à partir de l'entité <i>INSTRUMENT</i> par l'association de dépendance fonctionnelle <i>about</i> en perdant son caractère identifiant.</li>
+    <li>Le champ <i>teacher_id</i> est une clef étrangère. Il a migré à partir de l'entité <i>TEACHER</i> par l'association de dépendance fonctionnelle <i>Give</i> en perdant son caractère identifiant.</li>
+    <li>Le champ <i>student_id</i> est une clef étrangère. Il a migré à partir de l'entité <i>STUDENT</i> par l'association de dépendance fonctionnelle <i>Take</i> en perdant son caractère identifiant.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>STUDENT</span> (
+    <span class='primary'>student_id</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>firstname</span>,
+    <span class='normal'>lastname</span>,
+    <span class='normal'>role</span>,
+    <span class='normal'>avatar</span>,
+    <span class='normal'>description</span>
+  )
+  <ul>
+    <li>Le champ <i>student_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>STUDENT</i>.</li>
+    <li>Les champs <i>email</i>, <i>password</i>, <i>firstname</i>, <i>lastname</i>, <i>role</i>, <i>avatar</i> et <i>description</i> étaient déjà de simples attributs de l'entité <i>STUDENT</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>Teach</span> (
+    <span class='foreign primary'>teacher_id</span>,
+    <span class='foreign primary'>instrument_id</span>
+  )
+  <ul>
+    <li>Le champ <i>teacher_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>TEACHER</i>.</li>
+    <li>Le champ <i>instrument_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>INSTRUMENT</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>INSTRUMENT</span> (
+    <span class='primary'>instrument_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>decsription</span>,
+    <span class='normal'>picture</span>
+  )
+  <ul>
+    <li>Le champ <i>instrument_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>INSTRUMENT</i>.</li>
+    <li>Les champs <i>name</i>, <i>decsription</i> et <i>picture</i> étaient déjà de simples attributs de l'entité <i>INSTRUMENT</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>Learn</span> (
+    <span class='foreign primary'>student_id</span>,
+    <span class='foreign primary'>instrument_id</span>
+  )
+  <ul>
+    <li>Le champ <i>student_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>STUDENT</i>.</li>
+    <li>Le champ <i>instrument_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>INSTRUMENT</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>Teacher has</span> (
+    <span class='foreign primary'>teacher_id</span>,
+    <span class='foreign primary'>style_id</span>
+  )
+  <ul>
+    <li>Le champ <i>teacher_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>TEACHER</i>.</li>
+    <li>Le champ <i>style_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>MUSIC_STYLE</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>MUSIC_STYLE</span> (
+    <span class='primary'>style_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>decsription</span>
+  )
+  <ul>
+    <li>Le champ <i>style_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>MUSIC_STYLE</i>.</li>
+    <li>Les champs <i>name</i> et <i>decsription</i> étaient déjà de simples attributs de l'entité <i>MUSIC_STYLE</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>Student has</span> (
+    <span class='foreign primary'>student_id</span>,
+    <span class='foreign primary'>style_id</span>
+  )
+  <ul>
+    <li>Le champ <i>student_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>STUDENT</i>.</li>
+    <li>Le champ <i>style_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>MUSIC_STYLE</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>Has certificate</span> (
+    <span class='foreign primary'>teacher_id</span>,
+    <span class='foreign primary'>certificate_id</span>
+  )
+  <ul>
+    <li>Le champ <i>teacher_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>TEACHER</i>.</li>
+    <li>Le champ <i>certificate_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>CERTIFICATE</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>CERTIFICATE</span> (
+    <span class='primary'>certificate_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>decsription</span>
+  )
+  <ul>
+    <li>Le champ <i>certificate_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>CERTIFICATE</i>.</li>
+    <li>Les champs <i>name</i> et <i>decsription</i> étaient déjà de simples attributs de l'entité <i>CERTIFICATE</i>.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

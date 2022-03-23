@@ -1,0 +1,57 @@
+%%mocodo
+:
+TEACHER: teacher_id, email, password, firstname, lastname, role, avatar, description
+:::
+
+
+
+:::
+LESSON: lesson_id, appointment, status, email_student:, #instrument_id->INSTRUMENT->instrument_id, #teacher_id->TEACHER->teacher_id, #student_id->STUDENT->student_id
+:
+
+
+
+:::
+STUDENT: student_id, email, password, firstname, lastname, role, avatar, description
+:
+
+
+
+:::
+Teach: #teacher_id->TEACHER->teacher_id, _#instrument_id->INSTRUMENT->instrument_id
+:
+
+
+:::
+INSTRUMENT: instrument_id, name, decsription, picture
+:
+
+
+:::
+Learn: #student_id->STUDENT->student_id, _#instrument_id->INSTRUMENT->instrument_id
+:
+
+
+:::
+Teacher has: #teacher_id->TEACHER->teacher_id, _#style_id->MUSIC_STYLE->style_id
+:
+
+
+:::
+MUSIC_STYLE: style_id, name, decsription
+:
+
+
+:::
+Student has: #student_id->STUDENT->student_id, _#style_id->MUSIC_STYLE->style_id
+:
+
+
+:::
+Has certificate: #teacher_id->TEACHER->teacher_id, _#certificate_id->CERTIFICATE->certificate_id
+:
+
+
+:::
+CERTIFICATE: certificate_id, name, decsription
+:

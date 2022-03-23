@@ -1,0 +1,216 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="800" height="1503" view_box="0 0 800 1503"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 20 Jan 2022 01:40:48</desc>
+
+<rect id="frame" x="0" y="0" width="800" height="1503" fill="#f5f5f5" stroke="none" stroke-width="0"/>
+
+<!-- Association about -->
+<line x1="340" y1="380" x2="340" y2="240" stroke="#bf812d" stroke-width="1"/>
+<text x="345.0" y="319" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<line x1="340" y1="98" x2="340" y2="240" stroke="#bf812d" stroke-width="1"/>
+<text x="345.0" y="168" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-about">
+	<path d="M 352 214 a 14 14 90 0 1 14 14 V 240 h -52 V 228 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 366 240.0 v 12 a 14 14 90 0 1 -14 14 H 328 a 14 14 90 0 1 -14 -14 V 240.0 H 52" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="314" y="214" width="52" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="314" y1="240" x2="366" y2="240" stroke="#bf812d" stroke-width="1"/>
+	<text x="321" y="232.6" fill="#000000" font-family="Trebuchet MS" font-size="14">about</text>
+</g>
+
+<!-- Association Give -->
+<line x1="340" y1="98" x2="190" y2="98" stroke="#bf812d" stroke-width="1"/>
+<text x="260" y="115.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="70" y1="98" x2="190" y2="98" stroke="#bf812d" stroke-width="1"/>
+<text x="117" y="115.0" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Give">
+	<path d="M 198 72 a 14 14 90 0 1 14 14 V 98 h -44 V 86 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 212 98.0 v 12 a 14 14 90 0 1 -14 14 H 182 a 14 14 90 0 1 -14 -14 V 98.0 H 44" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="168" y="72" width="44" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="168" y1="98" x2="212" y2="98" stroke="#bf812d" stroke-width="1"/>
+	<text x="175" y="90.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Give</text>
+</g>
+
+<!-- Association Has certificate -->
+<line x1="70" y1="98" x2="80" y2="400" stroke="#bf812d" stroke-width="1"/>
+<text x="46.1849039756" y="204" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="80" y1="650" x2="80" y2="400" stroke="#bf812d" stroke-width="1"/>
+<text x="85.0" y="598" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Has certificate">
+	<path d="M 121 374 a 14 14 90 0 1 14 14 V 400 h -110 V 388 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 135 400.0 v 12 a 14 14 90 0 1 -14 14 H 39 a 14 14 90 0 1 -14 -14 V 400.0 H 110" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="25" y="374" width="110" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="25" y1="400" x2="135" y2="400" stroke="#bf812d" stroke-width="1"/>
+	<text x="32" y="392.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Has certificate</text>
+</g>
+
+<!-- Association Teacher has -->
+<line x1="70" y1="98" x2="200" y2="500" stroke="#bf812d" stroke-width="1"/>
+<text x="104.299848086" y="204" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<line x1="340" y1="540" x2="200" y2="500" stroke="#bf812d" stroke-width="1"/>
+<text x="265" y="541.071097024" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Teacher has">
+	<path d="M 233 474 a 14 14 90 0 1 14 14 V 500 h -94 V 488 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 247 500.0 v 12 a 14 14 90 0 1 -14 14 H 167 a 14 14 90 0 1 -14 -14 V 500.0 H 94" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="153" y="474" width="94" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="153" y1="500" x2="247" y2="500" stroke="#bf812d" stroke-width="1"/>
+	<text x="160" y="492.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Teacher has</text>
+</g>
+
+<!-- Association Student has -->
+<line x1="620" y1="98" x2="500" y2="500" stroke="#bf812d" stroke-width="1"/>
+<text x="596.114845258" y="204" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<line x1="340" y1="540" x2="500" y2="500" stroke="#bf812d" stroke-width="1"/>
+<text x="393" y="543.073908214" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Student has">
+	<path d="M 531 474 a 14 14 90 0 1 14 14 V 500 h -90 V 488 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 545 500.0 v 12 a 14 14 90 0 1 -14 14 H 469 a 14 14 90 0 1 -14 -14 V 500.0 H 90" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="455" y="474" width="90" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="455" y1="500" x2="545" y2="500" stroke="#bf812d" stroke-width="1"/>
+	<text x="462" y="492.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Student has</text>
+</g>
+
+<!-- Association Take -->
+<line x1="340" y1="98" x2="490" y2="98" stroke="#bf812d" stroke-width="1"/>
+<text x="399" y="115.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="620" y1="98" x2="490" y2="98" stroke="#bf812d" stroke-width="1"/>
+<text x="551" y="115.0" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Take">
+	<path d="M 499 72 a 14 14 90 0 1 14 14 V 98 h -46 V 86 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 513 98.0 v 12 a 14 14 90 0 1 -14 14 H 481 a 14 14 90 0 1 -14 -14 V 98.0 H 46" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="467" y="72" width="46" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="467" y1="98" x2="513" y2="98" stroke="#bf812d" stroke-width="1"/>
+	<text x="474" y="90.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Take</text>
+</g>
+
+<!-- Association Learn -->
+<line x1="620" y1="98" x2="480" y2="280" stroke="#bf812d" stroke-width="1"/>
+<text x="551" y="150.377620563" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<line x1="340" y1="380" x2="480" y2="280" stroke="#bf812d" stroke-width="1"/>
+<text x="396" y="355.144402679" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Learn">
+	<path d="M 492 254 a 14 14 90 0 1 14 14 V 280 h -52 V 268 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 506 280.0 v 12 a 14 14 90 0 1 -14 14 H 468 a 14 14 90 0 1 -14 -14 V 280.0 H 52" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="454" y="254" width="52" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="454" y1="280" x2="506" y2="280" stroke="#bf812d" stroke-width="1"/>
+	<text x="461" y="272.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Learn</text>
+</g>
+
+<!-- Association Teach -->
+<line x1="70" y1="98" x2="200" y2="280" stroke="#bf812d" stroke-width="1"/>
+<text x="117" y="154.227025893" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<line x1="340" y1="380" x2="200" y2="280" stroke="#bf812d" stroke-width="1"/>
+<text x="262" y="355.144402679" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-Teach">
+	<path d="M 213 254 a 14 14 90 0 1 14 14 V 280 h -54 V 268 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 227 280.0 v 12 a 14 14 90 0 1 -14 14 H 187 a 14 14 90 0 1 -14 -14 V 280.0 H 54" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="173" y="254" width="54" height="52" fill="none" rx="14" stroke="#bf812d" stroke-width="1.5"/>
+	<line x1="173" y1="280" x2="227" y2="280" stroke="#bf812d" stroke-width="1"/>
+	<text x="180" y="272.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Teach</text>
+</g>
+
+<!-- Entity CERTIFICATE -->
+<g id="entity-CERTIFICATE">
+	<g id="frame-CERTIFICATE">
+		<rect x="30" y="606" width="100" height="26" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="30" y="632.0" width="100" height="62" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="30" y="606" width="100" height="88" fill="none" stroke="#35978f" stroke-width="1.5"/>
+		<line x1="30" y1="632" x2="130" y2="632" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="38" y="624.6" fill="#000000" font-family="Trebuchet MS" font-size="14">CERTIFICATE</text>
+	<text x="35" y="650.6" fill="#000000" font-family="Trebuchet MS" font-size="14">certificate_id</text>
+	<line x1="35" y1="653.0" x2="124" y2="653.0" stroke="#000000" stroke-width="1"/>
+	<text x="35" y="668.6" fill="#000000" font-family="Trebuchet MS" font-size="14">name</text>
+	<text x="35" y="686.6" fill="#000000" font-family="Trebuchet MS" font-size="14">decsription</text>
+</g>
+
+<!-- Entity INSTRUMENT -->
+<g id="entity-INSTRUMENT">
+	<g id="frame-INSTRUMENT">
+		<rect x="289" y="327" width="102" height="26" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="289" y="353.0" width="102" height="80" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="289" y="327" width="102" height="106" fill="none" stroke="#35978f" stroke-width="1.5"/>
+		<line x1="289" y1="353" x2="391" y2="353" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="299" y="345.6" fill="#000000" font-family="Trebuchet MS" font-size="14">INSTRUMENT</text>
+	<text x="294" y="371.6" fill="#000000" font-family="Trebuchet MS" font-size="14">instrument_id</text>
+	<line x1="294" y1="374.0" x2="385" y2="374.0" stroke="#000000" stroke-width="1"/>
+	<text x="294" y="389.6" fill="#000000" font-family="Trebuchet MS" font-size="14">name</text>
+	<text x="294" y="407.6" fill="#000000" font-family="Trebuchet MS" font-size="14">decsription</text>
+	<text x="294" y="425.6" fill="#000000" font-family="Trebuchet MS" font-size="14">picture</text>
+</g>
+
+<!-- Entity STUDENT -->
+<g id="entity-STUDENT">
+	<g id="frame-STUDENT">
+		<rect x="578" y="9" width="84" height="26" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="578" y="35.0" width="84" height="152" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="578" y="9" width="84" height="178" fill="none" stroke="#35978f" stroke-width="1.5"/>
+		<line x1="578" y1="35" x2="662" y2="35" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="590" y="27.6" fill="#000000" font-family="Trebuchet MS" font-size="14">STUDENT</text>
+	<text x="583" y="53.6" fill="#000000" font-family="Trebuchet MS" font-size="14">student_id</text>
+	<line x1="583" y1="56.0" x2="652" y2="56.0" stroke="#000000" stroke-width="1"/>
+	<text x="583" y="71.6" fill="#000000" font-family="Trebuchet MS" font-size="14">email</text>
+	<text x="583" y="89.6" fill="#000000" font-family="Trebuchet MS" font-size="14">password</text>
+	<text x="583" y="107.6" fill="#000000" font-family="Trebuchet MS" font-size="14">firstname</text>
+	<text x="583" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">lastname</text>
+	<text x="583" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">role</text>
+	<text x="583" y="161.6" fill="#000000" font-family="Trebuchet MS" font-size="14">avatar</text>
+	<text x="583" y="179.6" fill="#000000" font-family="Trebuchet MS" font-size="14">description</text>
+</g>
+
+<!-- Entity MUSIC_STYLE -->
+<g id="entity-MUSIC_STYLE">
+	<g id="frame-MUSIC_STYLE">
+		<rect x="292" y="496" width="96" height="26" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="292" y="522.0" width="96" height="62" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="292" y="496" width="96" height="88" fill="none" stroke="#35978f" stroke-width="1.5"/>
+		<line x1="292" y1="522" x2="388" y2="522" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="297" y="514.6" fill="#000000" font-family="Trebuchet MS" font-size="14">MUSIC_STYLE</text>
+	<text x="297" y="540.6" fill="#000000" font-family="Trebuchet MS" font-size="14">style_id</text>
+	<line x1="297" y1="543.0" x2="348" y2="543.0" stroke="#000000" stroke-width="1"/>
+	<text x="297" y="558.6" fill="#000000" font-family="Trebuchet MS" font-size="14">name</text>
+	<text x="297" y="576.6" fill="#000000" font-family="Trebuchet MS" font-size="14">decsription</text>
+</g>
+
+<!-- Entity LESSON -->
+<g id="entity-LESSON">
+	<g id="frame-LESSON">
+		<rect x="286" y="45" width="108" height="26" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="286" y="71.0" width="108" height="80" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="286" y="45" width="108" height="106" fill="none" stroke="#35978f" stroke-width="1.5"/>
+		<line x1="286" y1="71" x2="394" y2="71" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="315" y="63.6" fill="#000000" font-family="Trebuchet MS" font-size="14">LESSON</text>
+	<text x="291" y="89.6" fill="#000000" font-family="Trebuchet MS" font-size="14">lesson_id</text>
+	<line x1="291" y1="92.0" x2="351" y2="92.0" stroke="#000000" stroke-width="1"/>
+	<text x="291" y="107.6" fill="#000000" font-family="Trebuchet MS" font-size="14">appointment</text>
+	<text x="291" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">status</text>
+	<text x="291" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">email_student:</text>
+</g>
+
+<!-- Entity TEACHER -->
+<g id="entity-TEACHER">
+	<g id="frame-TEACHER">
+		<rect x="28" y="9" width="84" height="26" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="28" y="35.0" width="84" height="152" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="28" y="9" width="84" height="178" fill="none" stroke="#35978f" stroke-width="1.5"/>
+		<line x1="28" y1="35" x2="112" y2="35" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="40" y="27.6" fill="#000000" font-family="Trebuchet MS" font-size="14">TEACHER</text>
+	<text x="33" y="53.6" fill="#000000" font-family="Trebuchet MS" font-size="14">teacher_id</text>
+	<line x1="33" y1="56.0" x2="103" y2="56.0" stroke="#000000" stroke-width="1"/>
+	<text x="33" y="71.6" fill="#000000" font-family="Trebuchet MS" font-size="14">email</text>
+	<text x="33" y="89.6" fill="#000000" font-family="Trebuchet MS" font-size="14">password</text>
+	<text x="33" y="107.6" fill="#000000" font-family="Trebuchet MS" font-size="14">firstname</text>
+	<text x="33" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">lastname</text>
+	<text x="33" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">role</text>
+	<text x="33" y="161.6" fill="#000000" font-family="Trebuchet MS" font-size="14">avatar</text>
+	<text x="33" y="179.6" fill="#000000" font-family="Trebuchet MS" font-size="14">description</text>
+</g>
+</svg>

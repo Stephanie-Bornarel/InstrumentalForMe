@@ -1,0 +1,40 @@
+body{
+    
+    background-image:url('https://i.picsum.photos/id/145/4288/2848.jpg?hmac=UkhcwQUE-vRBFXzDN1trCwWigpm7MXG5Bl5Ji103QG4');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:black;
+    
+    
+    
+}
+
+.login h1 a{
+
+    background-image: url('https://drive.google.com/file/d/1oGhiSDyHaUpR0ffjWI8xpJVIL8Mfe5Nz/view?usp=sharing');
+    position:absolute;
+     
+     
+}
+
+.login #nav a,.login #backtoblog a {
+
+    font-weight:bold;
+    color:rgb(247, 240, 240);
+}
+
+.login form .input {
+
+    background-color:rgb(240, 247, 245);
+}
+
+.login form {
+    background-color: rgba(233, 219, 182, 0.932); 
+    border-radius:20px;
+    border-color:black;
+    
+}
+
+.login .message {
+    display:none;
+}

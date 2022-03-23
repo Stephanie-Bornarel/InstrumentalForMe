@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>TEACHER</span> (
+    <span class='primary'>teacher_id</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>firstname</span>,
+    <span class='normal'>lastname</span>,
+    <span class='normal'>role</span>,
+    <span class='normal'>avatar</span>,
+    <span class='normal'>description</span>
+  )
+</div>
+<div>
+  <span class='relation'>LESSON</span> (
+    <span class='primary'>lesson_id</span>,
+    <span class='normal'>appointment</span>,
+    <span class='normal'>status</span>,
+    <span class='normal'>email_student:</span>,
+    <span class='foreign'>instrument_id</span>,
+    <span class='foreign'>teacher_id</span>,
+    <span class='foreign'>student_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>STUDENT</span> (
+    <span class='primary'>student_id</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>firstname</span>,
+    <span class='normal'>lastname</span>,
+    <span class='normal'>role</span>,
+    <span class='normal'>avatar</span>,
+    <span class='normal'>description</span>
+  )
+</div>
+<div>
+  <span class='relation'>Teach</span> (
+    <span class='foreign primary'>teacher_id</span>,
+    <span class='foreign primary'>instrument_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>INSTRUMENT</span> (
+    <span class='primary'>instrument_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>decsription</span>,
+    <span class='normal'>picture</span>
+  )
+</div>
+<div>
+  <span class='relation'>Learn</span> (
+    <span class='foreign primary'>student_id</span>,
+    <span class='foreign primary'>instrument_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>Teacher has</span> (
+    <span class='foreign primary'>teacher_id</span>,
+    <span class='foreign primary'>style_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>MUSIC_STYLE</span> (
+    <span class='primary'>style_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>decsription</span>
+  )
+</div>
+<div>
+  <span class='relation'>Student has</span> (
+    <span class='foreign primary'>student_id</span>,
+    <span class='foreign primary'>style_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>Has certificate</span> (
+    <span class='foreign primary'>teacher_id</span>,
+    <span class='foreign primary'>certificate_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>CERTIFICATE</span> (
+    <span class='primary'>certificate_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>decsription</span>
+  )
+</div>
+</div>
+</body>
+</html>

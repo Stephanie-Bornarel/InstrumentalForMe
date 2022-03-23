@@ -1,0 +1,50 @@
+.v-application--wrap {
+    min-height: auto;
+}
+
+
+.v-application .primary {
+    background-color: #660000 !important;
+}
+
+
+input,
+select,
+textarea {
+    border: solid 1px #ccc;
+    padding: 4px 8px;
+    -moz-appearance: auto;
+    -webkit-appearance: auto;
+}
+
+
+.v-calendar-monthly .v-event-summary {
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+}
+
+.v-calendar-monthly .v-event-summary strong {
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+.v-event-summary {
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.v-event-summary strong {
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.appointmentH4 {
+    margin-top: 5em !important;
+    margin-bottom: 5em !important;
+}

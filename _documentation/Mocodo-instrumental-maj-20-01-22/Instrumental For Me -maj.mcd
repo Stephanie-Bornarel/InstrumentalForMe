@@ -1,0 +1,33 @@
+TEACHER: teacher_id, email, password, firstname, lastname, role, avatar, description
+::
+
+Give,  11 LESSON, 0N TEACHER
+
+
+LESSON: lesson_id, appointment, status, email_student:
+
+
+Take, 11 LESSON , 0N STUDENT
+
+STUDENT: student_id, email, password, firstname, lastname, role, avatar, description
+
+
+about, 0N INSTRUMENT,11 LESSON
+
+Teach, 1N TEACHER, 0N INSTRUMENT
+
+INSTRUMENT: instrument_id, name, decsription, picture
+
+Learn, 0N STUDENT, 0N INSTRUMENT
+
+
+Teacher has, 0N TEACHER, 0N MUSIC_STYLE
+
+MUSIC_STYLE: style_id, name, decsription
+
+Student has, 0N STUDENT, 0N MUSIC_STYLE
+
+
+Has certificate, 1N TEACHER, 0N CERTIFICATE
+
+CERTIFICATE: certificate_id, name, decsription
