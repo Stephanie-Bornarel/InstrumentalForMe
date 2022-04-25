@@ -27,10 +27,10 @@ $studentId = $student->ID;
         <section>
             <div class="profileH2">
                 <p class="profileView">Vous êtes sur la page de profil de</p>
-                <p><?php $urlAvatar = get_field('avatar', 'user_' . $teacherId)['url']; 
+                <p><?php $urlAvatar = get_field('avatar', 'user_' . $teacherId)['url'];
                     ?></p>
                 <img src="<?= $urlAvatar ?>" alt="">
-                <!-- <?php dump ($urlAvatar); ?> -->
+                <!-- <?php dump($urlAvatar); ?> -->
                 <h2><?= get_the_author(); ?></h2>
             </div>
             <div class="profileDescription">
@@ -49,7 +49,7 @@ $studentId = $student->ID;
                         <?php foreach ($teacherInstrument as $key => $value) : ?>
                             <option value="<?= $value->term_id; ?>" id="<?= $value->term_id; ?>"><?= $value->name; ?></option>
                         <?php endforeach; ?>
-                    </select><br>
+                    </select>
 
                     <!--
                     <label class="appointmentForm" for="date">Date souhaitée :</label><br>
@@ -137,7 +137,7 @@ $studentId = $student->ID;
                             <p class="taxoLayout"><?= substr($value->description, 0, 500) . '...'; ?></p>
                         <?php endforeach; ?>
                     <?php else : ?>
-                        <p class="taxoLayout"><?= get_the_author(); ?> n'a pas de style de musique sélectionné...</p>
+                        <p class="taxoLayout"><?= get_the_author(); ?> n'a pas de style de musique sélectionnée...</p>
                     <?php endif ?>
                 </ul>
             </div>
@@ -149,10 +149,14 @@ $studentId = $student->ID;
                     'certificate'
                 ); ?>
                 <ul>
-                    <?php foreach ($teacherCertificate as $key => $value) : ?>
-                        <h6 class="profileCertificate_ul-p"><a href="<?= get_term_link($value->term_id); ?>"><?= $value->name; ?></a></h6>
-                        <p class="taxoLayout"><?= substr($value->description, 0, 500) . '...'; ?></p>
-                    <?php endforeach; ?>
+                    <?php if (isset($teacherCertificate)) : ?>
+                        <?php foreach ($teacherCertificate as $key => $value) : ?>
+                            <h6 class="profileCertificate_ul-p"><a href="<?= get_term_link($value->term_id); ?>"><?= $value->name; ?></a></h6>
+                            <p class="taxoLayout"><?= substr($value->description, 0, 500) . '...'; ?></p>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <p class="taxoLayout"><?= get_the_author(); ?> n'a pas de certificats sélectionné...</p>
+                    <?php endif ?>
                 </ul>
             </div>
         </section>

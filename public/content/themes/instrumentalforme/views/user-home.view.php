@@ -240,7 +240,7 @@ if (in_array('teacher', $user->roles)) {
             <textarea id="lessons" style="display: none; width: 100%; height: 500px"><?= json_encode($lessons, JSON_PRETTY_PRINT); ?></textarea>
             <template>
                 <v-app>
-                    <v-sheet tile height="54" class="d-flex">
+                    <v-sheet title height="54" class="d-flex">
                         <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
                             <v-icon>mdi-chevron-left</v-icon>
                         </v-btn>

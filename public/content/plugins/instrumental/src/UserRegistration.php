@@ -265,8 +265,6 @@ class UserRegistration
     //                 div.style.display = "block";
     //             } else {
     //                 div.style.display = "none";
-    //             }
-
-    //         
-    //         </script>
+    //             }   
+    //       </script>
     //         
