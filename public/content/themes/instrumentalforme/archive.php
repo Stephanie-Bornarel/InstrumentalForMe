@@ -66,7 +66,7 @@
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_author(); ?>
                                     </a>
-                                </h2>                              
+                                </h2>                                        
                                     <a class="linkInstrument"><?php the_terms($post->ID, 'instrument'); ?></a>                         
                                 <div>
                                     <?php the_excerpt(); ?>

@@ -1,4 +1,4 @@
-console.log('%c' + 'Appointment.js LOADED', 'color: #0bf; font-size: 1rem; background-color:#fff');
+//console.log('%c' + 'Appointment.js LOADED', 'color: #0bf; font-size: 1rem; background-color:#fff');
 
 
 // Gestion du date + time picker dans la page "teacher profile"

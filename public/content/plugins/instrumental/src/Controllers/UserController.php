@@ -55,18 +55,18 @@ class UserController extends CoreController
                 $userId = $user->ID;
                 
 
-                // mise à jour des champs custom
+                // mise à jour des champs meta_user
                 $firstName = filter_input(INPUT_POST, 'user_firstname');
                 update_user_meta($user->ID, 'first_name', $firstName);
 
                 $lastName = filter_input(INPUT_POST, 'user_lastname');
                 update_user_meta($user->ID, 'last_name', $lastName);
 
+                 // mise à jour du champs custom
+                 $description = trim(filter_input(INPUT_POST, 'user_description'));
+                 update_user_meta($user->ID, 'user_description', $description);
                 // mise à jour de l'email
                 $email = trim(filter_input(INPUT_POST, 'user_email'));
-
-                // mise à jour de la description
-                $description = trim(filter_input(INPUT_POST, 'user_description'));
 
                 if ($email) {
                     $args = [
@@ -169,7 +169,6 @@ class UserController extends CoreController
         $datetime = new DateTime($datasLesson['date']);
         $date = $datetime->format('Y-m-d H:i');
 
-        // $studentEmail = $userStudent->user_email;
         $userStudentId = $userStudent->ID;
         $userTeacherId = $datasLesson['teacherId'];
         

@@ -17,8 +17,9 @@ use Instrumental\Controllers\UserController;
     <?php
     $current_user = wp_get_current_user();
     $userdata = get_userdata($current_user->ID);
-    $userName = $userdata->description;
+    $userName = $userdata->user_description;
     // dump(__FILE__ . ':' . __LINE__, $userName);
+   // dd($userdata->description);
     ?>
 
     <div class="container">
@@ -70,10 +71,18 @@ use Instrumental\Controllers\UserController;
                     </p>
                 </div>
                 <div class="containerUpdate">
+                <?php if ($userdata->description) : ?>
+                    <p>
+                        <label for="user_description" class='labelForm'>Votre description</label><br> 
+                        <input type="textarea" name="user_description" id="user_description" class="input" value="<?= $userdata->description ?>" size="170" autocapitalize="off">
+                    </p>
+                    <?php else : ?>
                     <p>
                         <label for="user_description" class='labelForm'>Votre description</label><br>
-                        <textarea name="user_description" id="user_description" class="textareaDescription" size="250" autocapitalize="off"><?= $userdata->description ?></textarea>
+                        <input type="textarea" name="user_description" id="user_description" class="input" value="" size="170" autocapitalize="off">
+                      
                     </p>
+                    <?php endif; ?>
                 </div>
 
                 <div class="containerUpdate">
@@ -84,17 +93,14 @@ use Instrumental\Controllers\UserController;
 
                     $user = wp_get_current_user();
                     $roles = $user->roles;
-                    // $query = new WP_Query([
-                    //     'author' => $user->ID,
-                    //     'post_type' => 'teacher-profile'
-                    // ]);
+                   
                     if (in_array('teacher', $user->roles)) {
                         $postType = 'teacher-profile';
                     } else {
                         $postType = 'student-profile';
                     }
                     $profileId = $user->ID;
-                    //$profileId = $query->posts[0]->ID;
+                   
                     // dump($profileId);
 
                     $selectedInstruments = wp_get_post_terms($profileId, 'instrument');
@@ -137,7 +143,7 @@ use Instrumental\Controllers\UserController;
                         echo "<div id='instrument' class='containerUpdateRadio'>";
                         echo "<br><label class='labelForm'>Vos instruments</label><br>";
                         $instruments = get_terms('instrument', array('hide_empty' => false));
-                        //dump($instruments);
+                        dump($instruments);
                         foreach ($instruments as $index => $instrument) :
                             $checked = '';
                             if (isset($instrumentsId[$instrument->term_id])) {

@@ -1,6 +1,6 @@
 body{
     
-    background-image:url('https://i.picsum.photos/id/145/4288/2848.jpg?hmac=UkhcwQUE-vRBFXzDN1trCwWigpm7MXG5Bl5Ji103QG4');
+    background-image:url('../assets/images/Basse/basse\ \(3\).jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color:black;
@@ -11,8 +11,10 @@ body{
 
 .login h1 a{
 
-    background-image: url('https://drive.google.com/file/d/1oGhiSDyHaUpR0ffjWI8xpJVIL8Mfe5Nz/view?usp=sharing');
-    position:absolute;
+    background-image: url('../assets/images/logo.png');
+    background-size: cover;
+    border-radius: 40px;
+    position:center;
      
      
 }
@@ -20,21 +22,36 @@ body{
 .login #nav a,.login #backtoblog a {
 
     font-weight:bold;
-    color:rgb(247, 240, 240);
+    color:rgb(237, 192, 192);
 }
 
 .login form .input {
 
-    background-color:rgb(240, 247, 245);
+    background-color:rgba(240, 247, 245, 0.229);
+    border-color: rgb(180, 125, 54);
+    box-shadow: 0 0 0 1px rgb(229 218 217);
 }
 
 .login form {
-    background-color: rgba(233, 219, 182, 0.932); 
-    border-radius:20px;
+    background-color: rgba(30, 29, 28, 0.749); 
+    border-radius:10px;
     border-color:black;
+    padding: 10px 20px 15px;
     
 }
 
 .login .message {
     display:none;
 }
+ label{
+     color:rgb(249, 245, 245);
+ }
+  #reg_passmail{
+    color:rgb(180, 125, 54);  
+  }
+  .wp-core-ui .button-primary {
+    background: rgb(180, 125, 54);
+    border-color: #3a0d0d;
+    
+  }
+ 
