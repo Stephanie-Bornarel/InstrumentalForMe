@@ -227,9 +227,7 @@ if (in_array('teacher', $user->roles)) {
     <!--Affichage des données(des leçons) dans le calendrier-->
     <section>
         <?php
-        // $user = wp_get_current_user();
-        // $userId = $user->ID;
-        // $lessonModel = new LessonModel();
+       
         if (in_array('teacher', $user->roles)) :
             $lessons = $lessonModel->getLessonsByTeacherId($userId);
         else :
@@ -243,12 +241,13 @@ if (in_array('teacher', $user->roles)) {
                     <v-sheet title height="54" class="d-flex">
                         <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
                             <v-icon>mdi-chevron-left</v-icon>
-                        </v-btn>
+                        </v-btn>                  
                         <v-select v-model="type" :items="types" dense outlined hide-details class="ma-2" label="Calendrier"></v-select>
-                        <v-spacer></v-spacer>
+                        <v-toolbar-title v-if="$refs.calendar"> {{ $refs.calendar.title }} </v-toolbar-title>          
                         <v-btn icon class="ma-2" @click="$refs.calendar.next()">
                             <v-icon>mdi-chevron-right</v-icon>
                         </v-btn>
+                        <v-spacer></v-spacer>
                     </v-sheet>
                     <v-sheet height="600">
                         <v-calendar :interval-format="intervalFormat" ref="calendar" v-model="value" :weekdays="weekday" :type="type" :events="events" :event-overlap-mode="mode" :event-overlap-threshold="30" :event-color="getEventColor" @change="getEvents" locale="fr"></v-calendar>

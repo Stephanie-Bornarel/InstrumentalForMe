@@ -26,14 +26,13 @@ class UserController extends CoreController
     public function home()
     {
         $this->show('views/user-home.view');
-        //$this->show('views/teacher-home.view');
     }
 
     public function saveProfile()
     {
         if (!$this->isConnected()) {
             header("HTTP/1.1 403 Forbidden"); // équivalent à http_response_code(403);
-            header("EasterEgg: Hello wonderland");
+            header("EasterEgg: Hello worl");
             $this->show('views/user-forbidden');
         } else {
             // mise à jour des champs acf
@@ -42,7 +41,7 @@ class UserController extends CoreController
             $updateProfile = filter_input(INPUT_POST, 'update-profile');
             if ($updateProfile && $this->isConnected()) {
 
-                // TODO il devrait y avoir un controle de token csrf (en wp chercher le terme "nonce")
+                // TODO  controle de token csrf ( wp_nonce")
                 // https://codex.wordpress.org/fr:Les_Nonces_WordPress
 
                 // en fonction du roles du user, définition de post à mettre à jour
@@ -62,9 +61,9 @@ class UserController extends CoreController
                 $lastName = filter_input(INPUT_POST, 'user_lastname');
                 update_user_meta($user->ID, 'last_name', $lastName);
 
-                 // mise à jour du champs custom
                  $description = trim(filter_input(INPUT_POST, 'user_description'));
-                 update_user_meta($user->ID, 'user_description', $description);
+                 update_user_meta($user->ID,'description', $description);
+
                 // mise à jour de l'email
                 $email = trim(filter_input(INPUT_POST, 'user_email'));
 
@@ -88,7 +87,7 @@ class UserController extends CoreController
 
                 // gestion des taxonomies
                 
-                $certificates = filter_input(INPUT_POST, 'certificate', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+                $certificates = (filter_input(INPUT_POST, 'certificate', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY));
                 $instruments = filter_input(INPUT_POST, 'instrument', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
                 $musicStyles = filter_input(INPUT_POST, 'musicStyle', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
               
@@ -109,8 +108,8 @@ class UserController extends CoreController
                     wp_set_post_terms($profile->ID, $musicStyles, 'music-style');
 
 
-                    // mise à jour de la description
-                    $description = filter_input(INPUT_POST, 'user_description');
+                    // // mise à jour de la description
+                    // $description = filter_input(INPUT_POST, 'user_description');
 
                     // DOC https://developer.wordpress.org/reference/functions/wp_update_post/
                     // DOC https://developer.wordpress.org/reference/functions/wp_insert_post/
@@ -160,7 +159,6 @@ class UserController extends CoreController
     public function takeLesson()
     {
         $model = new LessonModel();
-        // $model->createTable();
 
         $userStudent = wp_get_current_user();
         

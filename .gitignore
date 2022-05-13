@@ -1,2 +1,5 @@
 _bin
 .htaccess
+content
+vendor
+wp

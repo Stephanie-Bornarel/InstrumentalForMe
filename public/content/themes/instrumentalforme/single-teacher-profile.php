@@ -154,8 +154,9 @@ $studentId = $student->ID;
                             <h6 class="profileCertificate_ul-p"><a href="<?= get_term_link($value->term_id); ?>"><?= $value->name; ?></a></h6>
                             <p class="taxoLayout"><?= substr($value->description, 0, 500) . '...'; ?></p>
                         <?php endforeach; ?>
-                    <?php else : ?>
+                    <?php else: ?>
                         <p class="taxoLayout"><?= get_the_author(); ?> n'a pas de certificats sélectionné...</p>
+                    
                     <?php endif ?>
                 </ul>
             </div>

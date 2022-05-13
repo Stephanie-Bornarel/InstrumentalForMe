@@ -143,7 +143,7 @@ use Instrumental\Controllers\UserController;
                         echo "<div id='instrument' class='containerUpdateRadio'>";
                         echo "<br><label class='labelForm'>Vos instruments</label><br>";
                         $instruments = get_terms('instrument', array('hide_empty' => false));
-                        dump($instruments);
+                       // dump($instruments);
                         foreach ($instruments as $index => $instrument) :
                             $checked = '';
                             if (isset($instrumentsId[$instrument->term_id])) {
@@ -188,9 +188,6 @@ use Instrumental\Controllers\UserController;
                         <?php
                         $options = array(
                             'post_id' => 'user_' . $current_user->ID,
-                            // 'field_groups' => array(77),
-                            // 'form' => false,
-                            // 'return' => add_query_arg('updated', 'true', '?'),
                             'html_before_fields' => '',
                             'html_after_fields' => '',
                             'submit_value' => 'Update'
